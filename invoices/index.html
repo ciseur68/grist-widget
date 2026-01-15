@@ -40,11 +40,11 @@
           <div class="top">
             <div class="block">
               <div class="header">
-                <div class="meta title">Invoice</div>
+                <div class="meta title">Facture</div>
               </div>
-              <div class="info"><span class="meta">Invoice Number</span> #{{ invoice.Number }}</div>
-              <div class="info" v-if="invoice.Issued"><div class="meta date-tag">Issued</div> {{ invoice.Issued | asDate }}</div>
-              <div class="info" v-if="invoice.Due"><div class="meta date-tag">Due</div> {{ invoice.Due | asDate }}</div>
+              <div class="info"><span class="meta">Numéro de facture</span> #{{ invoice.Number }}</div>
+              <div class="info" v-if="invoice.Issued"><div class="meta date-tag">Date</div> {{ invoice.Issued | asDate }}</div>
+              <!--<div class="info" v-if="invoice.Due"><div class="meta date-tag">Due</div> {{ invoice.Due | asDate }}</div>-->
             </div>
             
             <div class="supplier">
@@ -114,9 +114,9 @@
             <template v-else>
               <tr>
                 <th>Description</th>
-                <th class="money">Unit Price</th>
-                <th class="number">Quantity</th>
-                <th class="money">Total</th>
+                <th class="money">Prix unitaire</th>
+                <th class="number">Quantité</th>
+                <th class="money">Total HT</th>
               </tr>
               <tr v-for="item in invoice.Items">
                 <td>{{ item.Description }}</td>
@@ -129,19 +129,19 @@
 
           <div class="summary">
             <div class="part">
-              <div class="title">Subtotal</div>
+              <div class="title">Sous-total</div>
               <div class="details">{{ invoice.Subtotal | currency }}</div>
             </div>
             <div class="part">
-              <div class="title">Deduction</div>
+              <div class="title">Réduction</div>
               <div class="details">{{ invoice.Deduction | currency }}</div>
             </div>
             <div class="part">
-              <div class="title">Taxes</div>
+              <div class="title">TVA</div>
               <div class="details">{{ invoice.Taxes | currency }}</div>
             </div>
             <div class="total">
-              <div class="title">Total</div>
+              <div class="title">Total TTC</div>
               <div class="details">{{ invoice.Total | currency }}</div>
             </div>
           </div>
