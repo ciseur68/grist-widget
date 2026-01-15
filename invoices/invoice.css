@@ -16,7 +16,7 @@ a {
 }
 
 .meta {
-  color: #ff8000;
+  color: #3a58a4;
 }
 
 .header .title {
@@ -50,7 +50,7 @@ a {
   padding: 1px;
   margin-top: 1em;
   margin-bottom: 1em;
-  background: #ff8000;
+  background: #3a58a4;
   -webkit-print-color-adjust: exact !important;
   color-adjust: exact !important;
 }
@@ -68,7 +68,7 @@ a {
 
 table.items {
   width: 100%;
-  border: 1px solid #ff8000;
+  border: 1px solid #3a58a4;
   border-collapse: collapse;
 }
 
